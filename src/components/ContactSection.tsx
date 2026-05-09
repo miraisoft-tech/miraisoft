@@ -6,8 +6,8 @@ const ContactSection: React.FC = () => {
     {
       icon: <Mail className="text-mirai-500" size={24} />,
       title: 'Email Us',
-      details: 'info@mirasoft.ng',
-      link: 'mailto:info@mirasoft.ng',
+      details: 'info@miraisoft.ng',
+      link: 'mailto:info@miraisoft.ng',
     },
     {
       icon: <Phone className="text-mirai-500" size={24} />,
@@ -91,7 +91,7 @@ const ContactSection: React.FC = () => {
 
             <div className="p-8">
               <form
-                action="https://formsubmit.co/info@mirasoft.ng"
+                action="https://formsubmit.co/info@miraisoft.ng"
                 method="POST"
                 className="space-y-6"
               >
