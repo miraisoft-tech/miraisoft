@@ -38,7 +38,13 @@ const Navbar: React.FC = () => {
       <div className="container-custom py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <a href="#" className="flex items-center">
+          <a href="#" className="flex items-center space-x-2">
+            <img
+              src="/miraisoft_logo.svg"
+              alt="Miraisoft Logo"
+              className="h-8 w-8 object-contain"
+              style={{ minWidth: 32 }}
+            />
             <span className="text-2xl font-heading font-bold text-mirai-700">
               Mirai<span className="text-mirai-500">soft</span>
             </span>
