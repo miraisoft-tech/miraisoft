@@ -1,25 +1,24 @@
-
-import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import React, { useState, useEffect } from 'react'
+import { Menu, X } from 'lucide-react'
 
 const Navbar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
-        setIsScrolled(true);
+        setIsScrolled(true)
       } else {
-        setIsScrolled(false);
+        setIsScrolled(false)
       }
-    };
+    }
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll)
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   const navLinks = [
     { name: 'Home', href: '#home' },
@@ -27,10 +26,10 @@ const Navbar: React.FC = () => {
     { name: 'About', href: '#about' },
     { name: 'Testimonials', href: '#testimonials' },
     { name: 'Contact', href: '#contact' },
-  ];
+  ]
 
   return (
-    <nav 
+    <nav
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${
         isScrolled ? 'bg-white/90 backdrop-blur-sm shadow-sm' : 'bg-transparent'
       }`}
@@ -61,10 +60,7 @@ const Navbar: React.FC = () => {
                 {link.name}
               </a>
             ))}
-            <a
-              href="#contact"
-              className="btn-primary"
-            >
+            <a href="#contact" className="btn-primary">
               Get Started
             </a>
           </div>
@@ -104,7 +100,7 @@ const Navbar: React.FC = () => {
         )}
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
